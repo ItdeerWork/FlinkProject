@@ -1,0 +1,5 @@
+The granularity to create time chunks at.
+Multiple segments can be created per time chunk.
+For example, with 'DAY' segmentGranularity,
+the events of the same day fall into the same time chunk which can be optionally further partitioned into multiple segments based on other configurations and input size.
+See Granularity for supported granularities.
