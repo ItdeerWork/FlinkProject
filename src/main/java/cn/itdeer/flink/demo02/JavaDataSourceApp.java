@@ -36,7 +36,7 @@ public class JavaDataSourceApp {
     }
 
     /**
-     * DataSource 为文件
+     * DataSource 为文件或者文件夹
      * @param env
      * @throws Exception
      */

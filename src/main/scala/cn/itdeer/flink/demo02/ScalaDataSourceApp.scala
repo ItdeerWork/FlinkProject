@@ -44,7 +44,14 @@ object ScalaDataSourceApp {
   def fromCSV(env: ExecutionEnvironment): Unit = {
     import org.apache.flink.api.scala._
     val path = "F:\\Code\\Study\\FlinkProject\\src\\main\\scala\\cn\\itdeer\\scaladata\\data02.csv"
-    env.readCsvFile[(String, Integer, String)](path, ignoreFirstLine = true).print()
+//    env.readCsvFile[(String, Integer, String)](path, ignoreFirstLine = true).print()
+//    env.readCsvFile[(String, Integer)](path, ignoreFirstLine = true,includedFields = Array(0,1)).print()
+//    env.readCsvFile[(String, Integer)](path, ignoreFirstLine = true,includedFields = Array(0,1)).print()
+
+//    case class My2CaseClass(name:String,age:Int)
+//    env.readCsvFile[My2CaseClass](path, ignoreFirstLine = true,includedFields = Array(0,1)).print()
+
+      env.readCsvFile[Person](path, ignoreFirstLine = true,pojoFields = Array("name","age","address")).print()
   }
 
 }
