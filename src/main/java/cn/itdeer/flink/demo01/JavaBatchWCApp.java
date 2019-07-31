@@ -18,7 +18,7 @@ public class JavaBatchWCApp {
 
         ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
 
-        String path = "F:\\Code\\Study\\FlinkProject\\src\\main\\java\\cn\\itdeer\\javadata\\data01";
+        String path = "F:\\Code\\Study\\FlinkProject\\src\\main\\java\\cn\\itdeer\\javadata\\p2";
 
         DataSource<String> text = env.readTextFile(path);
 
